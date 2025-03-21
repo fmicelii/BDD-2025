@@ -116,8 +116,8 @@ begin
 declare var int default 0;-- falta calcular total
 declare total default 0;
 select count(*) into var from products where buyPrice < MSRP and n_producto = productCode;
-
 select count(*) into total from products where n_producto = productCode;
 return 100*(var/total);
 end//
 delimiter ;
+

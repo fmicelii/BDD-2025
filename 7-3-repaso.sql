@@ -1,6 +1,7 @@
 #1
 select nombre from proveedor where ciudad = "La Plata";
 
+
 #2
 delete from articulo where codigo!=(select articulo_codigo from compuesto_por where material_codigo <= 0);
 

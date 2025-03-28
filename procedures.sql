@@ -78,4 +78,79 @@ call datos_cliente();
 
 #9
 delimiter //
-create procedure 
+create procedure getCiudadesOffices (out listadoCiudades varchar(4000))
+begin
+	declare hayFilas boolean default 1;
+	declare ciudadObtenida varchar(45) default "";
+	declare ciudadesCursor cursor for select city from offices;
+	declare continue handler for not found set hayFilas = 0;
+	set listadoCiudades = "";
+	open ciudadesCursor;
+	elLoop:loop
+		fetch ciudadesCursor into ciudadObtenida;
+		if hayFilas = 0 then
+			leave elLoop;
+		end if;
+		set listadoCiudades = concat(ciudadObtenida, ", ", listadoCiudades);
+	end loop elLoop;
+	close ciudadesCursor;
+end//
+delimiter ;
+drop procedure getCiudadesOffices;
+call getCiudadesOffices(@listadoCiudades);
+select @listadoCiudades;
+
+#10
+create table cancelledOrders(
+	orderNumber int primary key,
+    orderDate date,
+    shippedDate date,
+    customerNumber int
+);
+
+
+delimiter //
+create procedure insertCancelledOrders (out cant_cancelados int)
+begin
+declare hayFilas boolean default 1;
+declare variable1, variable4 int;
+declare variable2, variable3 date;
+declare ordenesCursor cursor for select orderNumber, orderDate, shippedDate, customerNumber from orders where status = "Cancelled";
+declare continue handler for not found set hayFilas = 0;
+open ordenesCursor;
+ordenesLoop:loop
+	fetch ordenesCursor into variable1, variable2, variable3, variable4;
+	if hayFilas = 0 then
+	leave ordenesLoop;
+	end if;
+	insert into cancelledOrders values(variable1, variable2, variable3, variable4);
+end loop ordenesLoop;
+close ordenesCursor;
+select count(*) into cant_cancelados from cancelledOrders;
+end//
+delimiter ;
+call insertCancelledOrders(@cant_cancelados);
+select @cant_cancelados;
+
+#11
+lo agrega fran
+
+
+#12
+delimiter //
+create procedure cliente_con_orden_cancelada(out telefono int)
+begin
+declare hayFilas boolean default 1;
+declare clienteCursor cursor for select phone from customers join orders on customers.customerNumber =
+orders.customerNumber where status = "Cancelled";
+declare continue handler for not found set hayFilas = 0;
+open productosCursor;
+clienteLoop:loop
+fetch productosCursor into productoObtenido;
+if hayFilas = 0 then
+leave clienteLoop;
+end if;
+end loop clienteLoop;
+close productosCursor;
+end//
+delimiter ;

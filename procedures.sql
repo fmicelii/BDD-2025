@@ -150,26 +150,36 @@ delimiter //
  	close comentarioCursor;
  end//
  delimiter ;
+ call alterCommentOrder;
 
 
-#12
+# 12 - Crear un SP que devuelva en un parámetro de salida los telefonos de los clientes que
+#      cancelaron una orden y no volvieron a comprar.
+drop procedure telefonos;
 delimiter //
-create procedure cliente_con_orden_cancelada(out telefono int)
+create procedure  telefonos (out listadoTelefonos text)
 begin
 	declare hayFilas boolean default 1;
-	declare clienteCursor cursor for select phone,max(orderDate) from customers join orders on customers.customerNumber = 
-	orders.customerNumber where status = "Cancelled";
-    
-	declare continue handler for not found set hayFilas = 0;
-	open productosCursor;
-	clienteLoop:loop
-		fetch productosCursor into productoObtenido;
-		if hayFilas = 0 then
-			leave clienteLoop;
+	declare telActual text;
+    declare numActual int;
+    declare ultimaFecha date;
+	declare cursor_telefonos cursor for select distinct phone,orders.customerNumber from customers 
+	join orders on customers.customerNumber = orders.customerNumber where status = "Cancelled";
+	declare continue handler for not found set hayFilas=0;
+    set listadoTelefonos = "";
+	open cursor_telefonos;
+	pepo:loop 
+		fetch cursor_telefonos into telActual,numActual;
+		if hayFilas = 0 then 
+			leave pepo;
+		end if;	
+        select max(orderDate) into ultimaFecha from orders where orders.customerNumber = numActual and status = "Cancelled";
+		if not exists (select * from orders where orderDate > ultimaFecha and orders.customerNumber = numActual) then
+			set listadoTelefonos = concat(telActual, ", ", listadoTelefonos);
 		end if;
-	end loop clienteLoop;
-	close productosCursor;
+	end loop pepo;
+    close cursor_telefonos;
 end//
 delimiter ;
-call cliente_con_orden_cancelada;
-
+call telefonos(@listadoTelefonos);
+select @listadoTelefonos;

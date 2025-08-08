@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 1</title>
+    <style>
+        #divsito{
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            border-radius: 100%;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="divsito"></div>
+    </main>
+    <script>
+        document.getElementById("divsito").addEventListener("click", () => {
+            if (document.body.style.backgroundColor == "red") {
+                document.body.style.backgroundColor = "white";
+            } else {
+                document.body.style.backgroundColor = "red";
+            }
+        });
+    </script>
+</body>
+</html>

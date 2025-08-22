@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f9;
+        margin: 40px;
+        text-align: center;
+        }
+
+        h1 {
+        color: #333;
+        }
+
+        button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background: #000000;
+        color: white;
+        border: none;
+        cursor: pointer;
+        }
+
+        button:hover {
+        background: #1d1d1e;
+        }
+
+        .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+        }
+
+        .card {
+        background: white;
+        padding: 20px;
+        text-align: left;
+        border: 1px solid #000000;
+        }
+
+        .card h3 {
+        margin: 0 0 10px;
+        color: #000000;
+        }
+
+        .card p {
+        margin: 5px 0;
+        font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Perros</h1>
+    <button id="loadBtn">Cargar datos</button>
+
+    <div class="card-container" id="cardContainer"></div>
+
+    <script>
+        const loadBtn = document.getElementById("loadBtn");
+        const container = document.getElementById("cardContainer");
+
+        loadBtn.addEventListener("click", async function () {
+            try {
+                const response = await fetch("https://dogapi.dog/api/v2/breeds");
+                const data = await response.json();
+
+                data.data.forEach(function (breed) {
+                    const attributes = breed.attributes;
+
+                    const card = document.createElement("div");
+                    card.className = "card";
+
+                    card.innerHTML = `
+                        <h3>${attributes.name}</h3>
+                        <p><strong>Descripción:</strong> ${attributes.description}</p>
+                        <p><strong>Esperanza de vida:</strong> ${attributes.life.min} - ${attributes.life.max} años</p>
+                        <p><strong>Peso Macho:</strong> ${attributes.male_weight.min} - ${attributes.male_weight.max} kg</p>
+                    `;
+
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                console.error("Error al cargar los datos:", error);
+            }
+        });
+    </script>
+
+</body>
+</html>

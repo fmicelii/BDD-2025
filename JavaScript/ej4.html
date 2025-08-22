@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Lista de Supermercado</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background: #f4f4f9;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        }
+
+    .container {
+        max-width: 400px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+    input {
+        width: 70%;
+        padding: 8px;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        padding: 8px 12px;
+        background: #000000;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    ul {
+        margin-top: 20px;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fafafa;
+        padding: 8px;
+        margin-bottom: 5px;
+    }
+
+    .btnEliminar {
+        background: #dc3545;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+    }
+
+</style>
+</head>
+<body>
+
+<h1>Lista de Supermercado</h1>
+<div class="container">
+    <input type="text" id="itemInput" placeholder="Escribe un recordatorio">
+    <button id="agregarBtn">Agregar</button>
+    
+    <ul id="listaItems"></ul>
+</div>
+
+<script>
+    const input = document.getElementById('itemInput');
+    const agregarBtn = document.getElementById('agregarBtn');
+    const listaItems = document.getElementById('listaItems');
+
+    agregarBtn.addEventListener('click', () => {
+    const text = input.value.trim();
+
+    if (text !== "") {
+        const li = document.createElement('li');
+        const span = document.createElement('span');
+        span.textContent = text;
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = "Eliminar";
+        deleteBtn.className = "delete-btn";
+
+        deleteBtn.addEventListener('click', () => {
+        listaItems.removeChild(li);
+        });
+
+        li.appendChild(span);
+        li.appendChild(deleteBtn);
+        listaItems.appendChild(li);
+        
+        input.value = "";
+    }
+    });
+</script>
+</body>
+</html>

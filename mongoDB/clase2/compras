@@ -1,0 +1,27 @@
+[{
+  "_id": 1,
+  "nombre": "Pepito",
+  "apellido": "Lopez",
+  "mail": "pepilopez@gmail.com",
+  "clave": "pepito123",
+  "direcciones": [
+    {
+      "calle": "tamborini",
+      "ciudad": "CABA",
+      "codigoPostal": "1419",
+      "provincia": "buenos aires"
+    },
+    {
+      "calle": "caracas",
+      "ciudad": "CABA",
+      "codigoPostal": "1419",
+      "provincia": "buenos aires"
+    },
+    {
+      "calle": "terrada",
+      "ciudad": "CABA",
+      "codigoPostal": "1419",
+      "provincia": "buenos aires"
+    }
+  ]
+}]

@@ -1,0 +1,19 @@
+[{
+  "_id": 1,
+  "nombre": "Programacion",
+  "hrsSemanales": 6,
+  "profesores": [
+    {
+      "Nombre": "Martin",
+      "Apellido": "Barbieri",
+      "email": "tinchitoxd@gmail.com",
+      "Titulo": "Ingeniero"
+    },
+    {
+      "Nombre": "Franco",
+      "Apellido": "Callipo",
+      "email": "franquitocalipin@gmail.com",
+      "Titulo": "Ingeniero"
+    }
+  ]
+}]

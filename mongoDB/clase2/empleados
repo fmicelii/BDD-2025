@@ -1,0 +1,13 @@
+[{
+  "_id": 2,
+  "nombre": "Juan",
+  "apellido": "Pérez",
+  "mail": "juan.perez@example.com",
+  "fechaNacimiento": "1975-10-2",
+  "puesto": "encargado",
+  "carnet": {
+    "nroSerie": "2",
+    "fechaEmision": "2023-05-12",
+    "fechaVencimiento": "2028-05-12"
+  }
+}]

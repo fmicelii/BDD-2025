@@ -1,0 +1,27 @@
+[{
+  "_id": 1,
+  "nombre": "Juan",
+  "apellido": "Pérez",
+  "dni": "30111222",
+  "fecha_nacimiento": "1980-04-15",
+  "telefono": "1133445566",
+  "historia_clinica": {
+    "numero": "1",
+    "fecha_inicio": "2020-01-10",
+    "observaciones": "Paciente con hipertensión.",
+    "registros_medicos": [
+      {
+        "fecha_consulta": "2020-02-01",
+        "diagnostico": "gripe",
+        "tratamiento": "Paracetamol 500mg",
+        "medico": "Dra. López"
+      },
+      {
+        "fecha_consulta": "2021-06-15",
+        "diagnostico": "Hipertensión leve",
+        "tratamiento": "Dieta baja en sodio, control periódico",
+        "medico": "Dr. García"
+      }
+    ]
+  }
+}]

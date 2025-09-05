@@ -1,0 +1,14 @@
+[{
+  "_id": 1,
+  "Nombre": "Martin",
+  "Apellido": "Barbieri",
+  "email": "tinchitoxd@gmail.com",
+  "Titulo": "Ingeniero",
+  "Materias": [
+    {
+      "_id": 1,
+      "Nombre": "Programacion",
+      "hrsSemanales": 6
+    }
+  ]
+}]

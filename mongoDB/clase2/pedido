@@ -1,0 +1,17 @@
+[{
+  "_id": 1,
+  "fechaPedido": "2025-04-09",
+  "productos": [
+    {
+      "_id": 1,
+      "cantidad": 3,
+      "precioUnitario": 300
+    },
+    {
+      "_id": 2,
+      "cantidad": 1,
+      "precioUnitario": 145
+    }
+  ],
+  "montoTotal": 1045
+}]

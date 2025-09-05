@@ -1,0 +1,21 @@
+[{
+  "_id": 1,
+  "Titulo": "titanic",
+  "Año": 1995,
+  "Genero": "drama",
+  "Duracion": "1h 35m",
+  "Actores": [
+    {
+      "Nombre": "Tom",
+      "Apellido": "Hanks",
+      "fechaNacimiento": "1980-11-11",
+      "Nacionalidad": "estadounidense"
+    },
+    {
+      "Nombre": "Tom",
+      "Apellido": "Holland",
+      "fechaNacimiento": "1990-11-11",
+      "Nacionalidad": "britanico"
+    }
+  ]
+}]

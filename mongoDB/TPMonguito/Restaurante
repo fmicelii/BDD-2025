@@ -1,0 +1,134 @@
+[{
+  "_id": 1,
+  "nombre": "el gallito",
+  "direccion": "Tamborini 3574",
+  "telefono": "11 2638 6938",
+  "horario atencion": "de 7:00 a 23:00",
+  "idMenu": 1,
+  "metodos de pago": [
+    "efectivo",
+    "transferencia",
+    "tarjeta"
+  ],
+  "servicios adicionales": [
+    "catering",
+    "estacionamiento",
+    "eventos privados",
+    "opciones sin TACC/ veganas / vegetarianas"
+  ],
+  "promociones": [
+    {
+      "nombre descuento": "Black friday",
+      "porcentaje": 20,
+      "fechaInicio": "2025-09-19",
+      "fechaFin": "2025-10-19"
+    }
+  ],
+  "eventosEspeciales": [
+    {
+      "nombreEvento": "Clases de cocina",
+      "descripcion": "clase de cocina bobo te enseñan a cocinar",
+      "fecha": "2025-09-20",
+      "horario": "21hs",
+      "requiereReserva": true
+    }
+  ]
+},{
+  "_id": 2,
+  "nombre": "jose",
+  "direccion": "mosconi 3574",
+  "telefono": "11 7838 6938",
+  "horario_atencion": "de 7:00 a 23:00",
+  "idMenu": 2,
+  "metodos_pago": [
+    "efectivo",
+    "transferencia",
+    "tarjeta"
+  ],
+  "servicios_adicionales": [
+    "eventos privados",
+    "opciones sin TACC/ veganas / vegetarianas"
+  ],
+  "promociones": [
+    {
+      "nombre_descuento": "casa por la ventana",
+      "porcentaje": 50,
+      "fechaInicio": "2025-09-19",
+      "fechaFin": "2025-10-19"
+    }
+  ],
+  "eventosEspeciales": [
+    {
+      "nombreEvento": "degustaciones",
+      "descripcion": "veni a probar",
+      "fecha": "2025-09-20",
+      "horario": "21hs",
+      "requiereReserva": true
+    }
+  ]
+},{
+  "_id": 7,
+  "nombre": "Don Julio",
+  "direccion": "Guatemala 4699",
+  "telefono": "11 4832 6058",
+  "horario_atencion": "de 12:00 a 00:00",
+  "idMenu": 3,
+  "metodos_pago": [
+    "efectiv      o",
+    "tarjeta",
+    "transferencia"
+  ],
+  "servicios_adicionales": [
+    "reserva online",
+    "sommelier",
+    "estacionamiento"
+  ],
+  "promociones": [
+    {
+      "nombre_descuento": "happy hour vinos",
+      "porcentaje": 30,
+      "fechaInicio": "2025-09-25",
+      "fechaFin": "2025-10-10"
+    }
+  ],
+  "eventosEspeciales": [
+    {
+      "nombreEvento": "Noche de Malbec",
+      "descripcion": "degustación de vinos argentinos",
+      "fecha": "2025-09-28",
+      "horario": "20hs",
+      "requiereReserva": true
+    }
+  ]
+},{
+  "_id": 4,
+  "nombre": "La Mezzetta",
+  "direccion": "Álvarez Thomas 1321",
+  "telefono": "11 4554 7585",
+  "horario_atencion": "de 18:00 a 01:00",
+  "idMenu": 4,
+  "metodos_pago": [
+    "efectivo"
+  ],
+  "servicios_adicionales": [
+    "delivery",
+    "take away"
+  ],
+  "promociones": [
+    {
+      "nombre_descuento": "Promo muzza",
+      "porcentaje": 25,
+      "fechaInicio": "2025-09-19",
+      "fechaFin": "2025-09-30"
+    }
+  ],
+  "eventosEspeciales": [
+    {
+      "nombreEvento": "Noche de pizza libre",
+      "descripcion": "pizza libre a la piedra",
+      "fecha": "2025-09-21",
+      "horario": "21hs",
+      "requiereReserva": false
+    }
+  ]
+}]

@@ -1,0 +1,65 @@
+[{
+  "_id": 1,
+  "platos": [
+    {
+      "nombre": "milanguche",
+      "precio": "1500",
+      "descripcion": "milanguinesa, huevo, tomate y lechuga",
+      "categoria": "plato principal",
+      "observacion": "aveces gusanitos caminan por ahi",
+      "es vegetariano": "false",
+      "es vegano": "false",
+      "es sin TACC": "false"
+    }
+  ]
+},{
+  "_id": 7,
+  "nombre": "milanguche",
+  "precio": "1500",
+  "descripcion": "milanguinesa, huevo, tomate y lechuga",
+  "categoria": "plato principal",
+  "observacion": "aveces gusanitos caminan por ahi",
+  "esVegetariano": false,
+  "esVegano": false,
+  "esSinTACC": false
+},{
+  "_id": 2,
+  "nombre": "ensalada caprese",
+  "precio": "1200",
+  "descripcion": "tomate, mozzarella, albahaca y aceite de oliva",
+  "categoria": "entrada",
+  "observacion": "muy fresca",
+  "esVegetariano": true,
+  "esVegano": false,
+  "esSinTACC": true
+},{
+  "_id": 3,
+  "nombre": "hamburguesa veggie",
+  "precio": "1800",
+  "descripcion": "hamburguesa de garbanzos, lechuga, tomate y pan sin TACC",
+  "categoria": "plato principal",
+  "observacion": "opcional con queso vegano",
+  "esVegetariano": true,
+  "esVegano": true,
+  "esSinTACC": true
+},{
+  "_id": 4,
+  "nombre": "papas fritas",
+  "precio": "800",
+  "descripcion": "papas cortadas a mano y fritas",
+  "categoria": "acompañamiento",
+  "observacion": "siempre crujientes",
+  "esVegetariano": true,
+  "esVegano": true,
+  "esSinTACC": true
+},{
+  "_id": 5,
+  "nombre": "pizza napolitana",
+  "precio": "2000",
+  "descripcion": "salsa de tomate, mozzarella, aceitunas y orégano",
+  "categoria": "plato principal",
+  "observacion": "masa artesanal",
+  "esVegetariano": true,
+  "esVegano": false,
+  "esSinTACC": false
+}]

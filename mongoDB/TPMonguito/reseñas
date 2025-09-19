@@ -1,0 +1,31 @@
+[{
+  "_id": 1,
+  "mailCliente": "juancitoxd@gmail.com",
+  "idRestaurante": 1,
+  "calificacion": 5
+},{
+  "_id": 2,
+  "mailCliente": "pollitopio@gmail.com",
+  "idRestaurante": 1,
+  "calificacion": 3
+},{
+  "_id": 3,
+  "mailCliente": "santiglitter@gmail.com",
+  "idRestaurante": 1,
+  "calificacion": 1
+},{
+  "_id": 4,
+  "mailCliente": "juancitoxd@gmail.com",
+  "idRestaurante": 2,
+  "calificacion": 5
+},{
+  "_id": 5,
+  "mailCliente": "pollitopio@gmail.com",
+  "idRestaurante": 3,
+  "calificacion": 3
+},{
+  "_id": 6,
+  "mailCliente": "santiglitter@gmail.com",
+  "idRestaurante": 4,
+  "calificacion": 1
+}]

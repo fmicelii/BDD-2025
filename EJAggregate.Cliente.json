@@ -1,0 +1,137 @@
+[{
+  "_id": {
+    "$oid": "68f23b6678b5301baa80574b"
+  },
+  "dni": 42756321,
+  "nombre": "Valentina",
+  "apellido": "Rossi",
+  "compras": [
+    {
+      "idCompra": 1,
+      "fechaCompra": "2025-10-05",
+      "productos": [
+        {
+          "idProducto": 1,
+          "descripcion": "Remera oversize",
+          "precio": 12000,
+          "cantComprada": 1
+        },
+        {
+          "idProducto": 2,
+          "descripcion": "Pantalón cargo",
+          "precio": 25000,
+          "cantComprada": 2
+        }
+      ]
+    },
+    {
+      "idCompra": 2,
+      "fechaCompra": "2025-10-15",
+      "productos": [
+        {
+          "idProducto": 3,
+          "descripcion": "Campera de jean",
+          "precio": 38000,
+          "cantComprada": 1
+        },
+        {
+          "idProducto": 4,
+          "descripcion": "Gorra negra",
+          "precio": 9000,
+          "cantComprada": 1
+        }
+      ]
+    }
+  ],
+  "edad": 30
+},
+{
+  "_id": 3,
+  "dni": 39877112,
+  "nombre": "Mateo",
+  "apellido": "Fernandez",
+  "compras": [
+    {
+      "idCompra": 1,
+      "fechaCompra": "2025-09-20",
+      "productos": [
+        {
+          "idProducto": 1,
+          "descripcion": "Buzo canguro gris",
+          "precio": 28000,
+          "cantComprada": 1
+        },
+        {
+          "idProducto": 2,
+          "descripcion": "Jogging negro",
+          "precio": 24000,
+          "cantComprada": 1
+        }
+      ]
+    },
+    {
+      "idCompra": 2,
+      "fechaCompra": "2025-10-10",
+      "productos": [
+        {
+          "idProducto": 3,
+          "descripcion": "Zapatillas urbanas",
+          "precio": 75000,
+          "cantComprada": 1
+        },
+        {
+          "idProducto": 4,
+          "descripcion": "Medias deportivas",
+          "precio": 6000,
+          "cantComprada": 3
+        }
+      ]
+    }
+  ],
+  "edad": 27
+},
+{
+  "_id": 1,
+  "dni": 46299018,
+  "nombre": "Luana",
+  "apellido": "Martinez",
+  "edad": 22,
+  "compras": [
+    {
+      "idCompra": 1,
+      "fechaCompra": "2025-09-10",
+      "productos": [
+        {
+          "idProducto": 1,
+          "descripcion": "agwahwa",
+          "precio": 2000,
+          "cantComprada": 2
+        },
+        {
+          "idProducto": 2,
+          "descripcion": "gawgsd",
+          "precio": 1500,
+          "cantComprada": 6
+        }
+      ]
+    },
+    {
+      "idCompra": 2,
+      "fechaCompra": "2025-09-11",
+      "productos": [
+        {
+          "idProducto": 3,
+          "descripcion": "rico",
+          "precio": 2000,
+          "cantComprada": 2
+        },
+        {
+          "idProducto": 4,
+          "descripcion": "feo",
+          "precio": 1500,
+          "cantComprada": 6
+        }
+      ]
+    }
+  ]
+}]
